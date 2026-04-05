@@ -12,7 +12,7 @@ WORKDIR /app
 COPY --from=build /app/build/libs/*.jar platzi-play.jar
 
 # Exponemos el puerto donde corre tu app
-EXPOSE 8090
+EXPOSE 10000
 
 # Ejecutamos la aplicación activando el perfil de producción
-ENTRYPOINT ["java", "-Dspring.profiles.active=prod", "-jar", "platzi-play.jar"]
+ENTRYPOINT ["java", "-Dserver.port=${PORT:10000}", "-Dspring.profiles.active=prod", "-jar", "platzi-play.jar"]
