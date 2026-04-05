@@ -49,14 +49,14 @@ public class MovieController {
     @Operation(summary = "Get a movie by ID",
             description = "Returns a single movie based on the provided ID",
             responses = {
-                  @ApiResponse(responseCode = "200", description = "Movie found"),
+                  @ApiResponse(responseCode = "200", description = "Movie found!!!"),
                   @ApiResponse(responseCode = "404", description = "Movie not found",
                   content = @Content(mediaType = "application/json"))
             }
     )
 
     public ResponseEntity<MovieDto> getById
-            (@Parameter(description = "Identiticador de la película a recuperar", example = "1")
+            (@Parameter(description = "Identiticador de la película a recuperar", example = "2")
              @PathVariable long id) {
         MovieDto movieDto = this.movieService.getById(id);
         if (movieDto == null) {
