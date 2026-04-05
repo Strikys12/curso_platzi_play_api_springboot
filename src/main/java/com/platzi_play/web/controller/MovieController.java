@@ -24,7 +24,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/movies")
-@Tag(name = "Movie Controller", description = "Endpoints for managing movies")
+@Tag(name = "Movie Controller", description = "Endpoints for managing movies!!")
 
 public class MovieController {
 
